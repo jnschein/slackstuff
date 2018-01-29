@@ -25,8 +25,8 @@ exports.execute = (req, res) => {
                     let fields = [];
                     fields.push({title: "Name", value: account.Name, short:true});
                     fields.push({title: "Creds", value: account.Login_Credentials__c, short:true});
-                    fields.push({title: "Open in Salesforce:", value: oauthObj.instance_url + "/" + account.Id, short:false});
-                    attachments.push({color: "#7F8DE1", fields: fields});
+                    //fields.push({title: "Open in Salesforce:", value: oauthObj.instance_url + "/" + account.Id, short:false});
+                    //attachments.push({color: "#7F8DE1", fields: fields});
                 });
                 res.json({text: "Accounts matching '" + req.body.text + "':", attachments: attachments});
             } else {
